@@ -22,8 +22,8 @@ export default function Home() {
               BAMS (Y.M.T. College, Navi Mumbai), MD (Ayurveda, D.Y. Patil College). Dedicated to personalized Ayurvedic care through evidence-based, time-tested therapies.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href="#contact" className="bg-emerald-500 text-neutral-900 px-5 py-3 rounded-md hover:bg-emerald-400 transition-colors">Book Now</a>
-              <a href="#services" className="px-5 py-3 rounded-md border border-neutral-800 hover:border-emerald-500 hover:text-emerald-400 transition-colors">View Services</a>
+              <a href="/contact" className="bg-emerald-500 text-neutral-900 px-5 py-3 rounded-md hover:bg-emerald-400 transition-colors">Book Now</a>
+              <a href="/services" className="px-5 py-3 rounded-md border border-neutral-800 hover:border-emerald-500 hover:text-emerald-400 transition-colors">View Services</a>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} viewport={{ once: true }}>
