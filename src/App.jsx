@@ -22,9 +22,9 @@ export default function App() {
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/services">Services</NavLink>
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/products">Products</NavLink>
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/about">About</NavLink>
-            <a className="hover:text-emerald-400" href="/#contact">Contact</a>
+            <a className="hover:text-emerald-400" href="#contact">Contact</a>
           </nav>
-          <a href="/#contact" className="hidden md:inline-block bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400 transition-colors">Book Appointment</a>
+          <a href="#contact" className="hidden md:inline-block bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400 transition-colors">Book Appointment</a>
         </div>
       </header>
 

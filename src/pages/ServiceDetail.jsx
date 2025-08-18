@@ -41,7 +41,7 @@ export default function ServiceDetail() {
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
               <h3 className="font-semibold">Book this service</h3>
               <p className="mt-2 text-neutral-300 text-sm">Contact for appointments and availability.</p>
-              <a href="/#contact" className="mt-3 inline-block bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400">Book now</a>
+              <a href="#contact" className="mt-3 inline-block bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400">Book now</a>
             </div>
             <Link to="/services" className="block text-center rounded-md border border-neutral-800 px-4 py-2 hover:border-emerald-500 hover:text-emerald-400">Back to services</Link>
           </aside>
