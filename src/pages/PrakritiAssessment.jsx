@@ -141,8 +141,18 @@ export default function PrakritiAssessment() {
 
         <p className="mt-2 text-neutral-300">Answer a few fun prompts to discover your dominant dosha profile.</p>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-6 items-stretch">
-          <div className="space-y-6">
+        <div className="mt-8 grid lg:grid-cols-12 gap-6 items-start">
+          <div className="lg:col-span-12 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
+            <h3 className="text-lg font-medium">How it works</h3>
+            <ul className="mt-3 text-neutral-300 text-sm space-y-2 list-disc list-inside">
+              <li>Each choice adds points to Vata, Pitta, or Kapha.</li>
+              <li>At the end, you get a percentage mix and guidance.</li>
+              <li>This is indicative only; consult for a clinical assessment.</li>
+            </ul>
+            <div className="mt-6 text-sm text-neutral-400">Have fun — your prakriti is your superpower.</div>
+          </div>
+
+          <div className="lg:col-span-8 space-y-6">
             <AnimatePresence mode="popLayout">
               {!finished ? (
                 <motion.div
@@ -151,16 +161,16 @@ export default function PrakritiAssessment() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -20, scale: 0.98 }}
                   transition={{ duration: 0.3 }}
-                  className="rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark"
+                  className="rounded-xl border border-neutral-800 bg-neutral-900 p-8 soft-shadow-dark"
                 >
                   <div className="text-sm text-neutral-400">Question {index + 1} of {QUESTIONS.length}</div>
-                  <h2 className="mt-2 text-xl font-medium">{QUESTIONS[index].q}</h2>
-                  <div className="mt-4 grid gap-3">
+                  <h2 className="mt-2 text-2xl font-semibold">{QUESTIONS[index].q}</h2>
+                  <div className="mt-5 grid gap-3">
                     {QUESTIONS[index].options.map((opt, i) => (
                       <button
                         key={i}
                         onClick={() => onChoose(opt.w)}
-                        className="text-left rounded-lg border border-neutral-700 hover:border-emerald-500 hover:text-emerald-300 bg-neutral-800 px-4 py-3 transition-colors"
+                        className="text-left rounded-lg border border-neutral-700 hover:border-emerald-500 hover:text-emerald-300 bg-neutral-800 px-5 py-4 transition-colors"
                       >
                         {opt.label}
                       </button>
@@ -174,7 +184,7 @@ export default function PrakritiAssessment() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark"
+                  className="rounded-xl border border-neutral-800 bg-neutral-900 p-8 soft-shadow-dark"
                 >
                   <div className="text-sm text-neutral-400">Your dominant prakriti</div>
                   <h2 className="mt-1 text-2xl font-semibold">
@@ -207,14 +217,13 @@ export default function PrakritiAssessment() {
             </AnimatePresence>
           </div>
 
-          <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
-            <h3 className="text-lg font-medium">How it works</h3>
+          <div className="lg:col-span-4 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
+            <h3 className="text-lg font-medium">Tips</h3>
             <ul className="mt-3 text-neutral-300 text-sm space-y-2 list-disc list-inside">
-              <li>Each choice adds points to Vata, Pitta, or Kapha.</li>
-              <li>At the end, you get a percentage mix and guidance.</li>
-              <li>This is indicative only; consult for a clinical assessment.</li>
+              <li>Answer instinctively; there are no wrong answers.</li>
+              <li>Results indicate tendencies, not diagnoses.</li>
+              <li>For a clinical analysis, book a consultation.</li>
             </ul>
-            <div className="mt-6 text-sm text-neutral-400">Have fun — your prakriti is your superpower.</div>
           </div>
         </div>
       </div>
