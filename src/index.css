@@ -13,8 +13,8 @@ html, body, #root { height: 100%; }
     linear-gradient(180deg, rgba(2,6,23,0) 0%, rgba(2,6,23,0.6) 100%);
 }
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .section:last-of-type {
   padding-bottom: 2rem;
@@ -22,6 +22,10 @@ html, body, #root { height: 100%; }
 .container-2xl {
   max-width: 1200px;
   width: 100%;
+}
+
+@media (max-width: 640px) {
+  .section { padding-top: 3rem; padding-bottom: 3rem; }
 }
 
 /* Card shadow */

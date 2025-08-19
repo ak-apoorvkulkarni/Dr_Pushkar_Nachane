@@ -9,6 +9,9 @@ const services = [
   { slug: 'stress-sleep-care', title: 'Stress & Sleep Care', desc: 'Mind-body therapies for better sleep, focus, and calm.' },
   { slug: 'skin-hair-wellness', title: 'Skin & Hair Wellness', desc: 'Non-invasive, natural treatments for long-term results.' },
   { slug: 'prakriti-assessment', title: 'Prakriti Assessment (Interactive)', desc: 'Gamified dosha quiz to discover your dominant constitution.' },
+  { slug: 'skin-hair-wizard', title: 'Skin & Hair Routine Wizard (Interactive)', desc: 'Pick concerns + dosha → get AM/PM routine with ingredients to seek/avoid.' },
+  { slug: 'posture-care', title: 'Posture & Joint Care Mini‑plan (Interactive)', desc: 'Choose pain area → 3 guided stretches + oiling guide + 5‑minute timer.' },
+  { slug: 'hydration-planner', title: 'Hydration & Sips Planner (Interactive)', desc: 'Weight + climate + activity → pacifying water schedule and temperature.' },
 ];
 
 export default function Services() {

@@ -142,7 +142,7 @@ export default function PrakritiAssessment() {
         <p className="mt-2 text-neutral-300">Answer a few fun prompts to discover your dominant dosha profile.</p>
 
         <div className="mt-8 grid lg:grid-cols-12 gap-6 items-start">
-          <div className="lg:col-span-12 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
+          <div className="lg:col-span-8 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
             <h3 className="text-lg font-medium">How it works</h3>
             <ul className="mt-3 text-neutral-300 text-sm space-y-2 list-disc list-inside">
               <li>Each choice adds points to Vata, Pitta, or Kapha.</li>
@@ -152,7 +152,16 @@ export default function PrakritiAssessment() {
             <div className="mt-6 text-sm text-neutral-400">Have fun — your prakriti is your superpower.</div>
           </div>
 
-          <div className="lg:col-span-8 space-y-6">
+          <div className="lg:col-span-4 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
+            <h3 className="text-lg font-medium">Tips</h3>
+            <ul className="mt-3 text-neutral-300 text-sm space-y-2 list-disc list-inside">
+              <li>Answer instinctively; there are no wrong answers.</li>
+              <li>Results indicate tendencies, not diagnoses.</li>
+              <li>For a clinical analysis, book a consultation.</li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-12 space-y-6">
             <AnimatePresence mode="popLayout">
               {!finished ? (
                 <motion.div
@@ -209,21 +218,12 @@ export default function PrakritiAssessment() {
                     )}
                   </div>
                   <div className="mt-6 flex gap-3">
-                    <a href="/#contact" className="bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400">Book Ayurvedic Consultation</a>
+                    <a href="/contact" className="bg-emerald-500 text-neutral-900 px-4 py-2 rounded-md hover:bg-emerald-400">Book Ayurvedic Consultation</a>
                     <button onClick={restart} className="border border-neutral-700 px-4 py-2 rounded-md hover:border-emerald-500 hover:text-emerald-300">Retake</button>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-
-          <div className="lg:col-span-4 rounded-xl border border-neutral-800 bg-neutral-900 p-6 soft-shadow-dark">
-            <h3 className="text-lg font-medium">Tips</h3>
-            <ul className="mt-3 text-neutral-300 text-sm space-y-2 list-disc list-inside">
-              <li>Answer instinctively; there are no wrong answers.</li>
-              <li>Results indicate tendencies, not diagnoses.</li>
-              <li>For a clinical analysis, book a consultation.</li>
-            </ul>
           </div>
         </div>
       </div>

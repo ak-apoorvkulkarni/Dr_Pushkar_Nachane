@@ -7,6 +7,9 @@ import Products from './pages/Products.jsx';
 import About from './pages/About.jsx';
 import PrakritiAssessment from './pages/PrakritiAssessment.jsx';
 import Contact from './pages/Contact.jsx';
+import SkinHairWizard from './pages/SkinHairWizard.jsx';
+import PostureCare from './pages/PostureCare.jsx';
+import HydrationPlanner from './pages/HydrationPlanner.jsx';
 
 export default function App() {
   return (
@@ -17,9 +20,9 @@ export default function App() {
 
       <header className="sticky top-0 z-50 bg-neutral-950/70 backdrop-blur border-b border-neutral-800">
         <div className="mx-auto px-6 py-4 flex items-center justify-between container-2xl">
-          <Link to="/Home" className="font-semibold text-lg">Dr. Pushkar Nachane</Link>
+          <Link to="/home" className="font-semibold text-lg">Dr. Pushkar Nachane</Link>
           <nav className="hidden md:flex gap-6 text-sm">
-            <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/Home">Home</NavLink>
+            <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/home">Home</NavLink>
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/services">Services</NavLink>
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/products">Products</NavLink>
             <NavLink className={({isActive}) => `hover:text-emerald-400 ${isActive ? 'text-emerald-400' : ''}`} to="/about">About</NavLink>
@@ -31,10 +34,14 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/Home" replace />} />
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/Home" element={<Navigate to="/home" replace />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/prakriti-assessment" element={<PrakritiAssessment />} />
+          <Route path="/services/skin-hair-wizard" element={<SkinHairWizard />} />
+          <Route path="/services/posture-care" element={<PostureCare />} />
+          <Route path="/services/hydration-planner" element={<HydrationPlanner />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />

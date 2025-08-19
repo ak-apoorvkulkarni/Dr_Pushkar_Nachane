@@ -29,7 +29,7 @@ export default function Home() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} viewport={{ once: true }}>
             <div className="relative soft-shadow-dark rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop" alt="Ayurvedic herbs and wellness" className="w-full h-[380px] object-cover" />
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop" alt="Ayurvedic herbs and wellness" className="w-full h-[300px] md:h-[380px] object-cover" />
             </div>
           </motion.div>
         </div>
